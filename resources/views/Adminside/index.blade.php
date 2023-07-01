@@ -36,23 +36,9 @@
 
                 </a>
 			</li>
-			<li>
-				<a href="#">
-					<a><span class="text">Message</span></a>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<a><span class="text">Team</span></a>
-				</a>
-			</li>
 		</ul>
 		<ul class="side-menu">
-			<li>
-				<a href="#">
-					<span class="text">Settings</span>
-				</a>
-			</li>
+
 			<li>
 				<a href="#" >
 					<a class="logout" href="{{route('signout')}}"><span class="text">Logout</span>
@@ -80,10 +66,7 @@
 			</form>
 			<input type="checkbox" id="switch-mode" hidden>
 			<label for="switch-mode" class="switch-mode"></label>
-			<a href="#" class="notification">
-				<i class='bx bxs-bell' ></i>
-				<span class="num">8</span>
-			</a>
+
 			<a href="#" class="profile">
 
 				<img src="{{asset('AdminImage/'.Auth()->user()->path)}}">

@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(['validation'])->group(function (){
     Route::get('showaddPost',[PostController::class,'showaddPost'])->name('showaddPost');
     Route::post('store',[PostController::class,'store'])->name('store');
-    Route::get('showDashboard',[PostController::class,'Admindashboard']);
+    Route::get('showDashboard',[PostController::class,'Admindashboard'])->name('showDashboard');
     Route::post('AdminInfo',[PostController::class,'storeAdminInfo'])->name('storeAdminInfo');
     Route::get('showAdminInfo',[PostController::class,'showAdminInfo'])->name('showAdminInfo');
     Route::get('showaddpost',[PostController::class,'showaddpost'])->name('showaddpost');
@@ -44,7 +44,7 @@ Route::post('destory/{id}',[PostController::class,'destory'])->name('destory');
 
 //Auth
 Route::get('/',[CustomAuthController::class,'home']);
-Route::get('dashboard', [CustomAuthController::class, 'dashboard']);
+Route::get('dashboard', [CustomAuthController::class, 'dashboard'])->name('dashboard');
 Route::get('login',[CustomAuthController::class,'index'])->name('login');
 Route::post('postlogin',[CustomAuthController::class,'login'])->name('postlogin');
 Route::get('signup', [CustomAuthController::class, 'signup'])->name('register-user');

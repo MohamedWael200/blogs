@@ -22,13 +22,13 @@
 		</a>
 		<ul class="side-menu top">
 			<li >
-				<a href="#">
+				<a href="{{route('showDashboard')}}">
 					<i class='bx bxs-dashboard' ></i>
 					<span class="text">Dashboard</span>
 				</a>
 			</li>
 			<li >
-				<a href="#">
+				<a href="{{route('showaddpost')}}">
 					<i class='bx bxs-comment-add' ></i>
 					<span class="text">Add Post</span>
 				</a>
@@ -39,25 +39,9 @@
 					<span class="text">Add Admin Info</span>
 				</a>
 			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-message-dots' ></i>
-					<span class="text">Message</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-group' ></i>
-					<span class="text">Team</span>
-				</a>
-			</li>
 		</ul>
 		<ul class="side-menu">
 			<li>
-				<a href="#">
-					<i class='bx bxs-cog' ></i>
-					<span class="text">Settings</span>
-				</a>
 			</li>
 			<li>
 				<a href="#" class="logout">
@@ -85,12 +69,9 @@
 			</form>
 			<input type="checkbox" id="switch-mode" hidden>
 			<label for="switch-mode" class="switch-mode"></label>
-			<a href="#" class="notification">
-				<i class='bx bxs-bell' ></i>
-				<span class="num">8</span>
-			</a>
+
 			<a href="#" class="profile">
-				<img src="{{asset('adminside/img/people.png')}}">
+                <img src="{{asset('AdminImage/'.Auth()->user()->path)}}">
 			</a>
 		</nav>
 		<!-- NAVBAR -->
@@ -102,12 +83,10 @@
 					<h1>Dashboard</h1>
 					<ul class="breadcrumb">
 						<li>
-							<a href="#">Dashboard</a>
+							<a href="{{route('showDashboard')}}">Dashboard</a>
 						</li>
 						<li><i class='bx bx-chevron-right' ></i></li>
-						<li>
-							<a class="active" href="#">Add Info</a>
-						</li>
+
 					</ul>
 				</div>
 
